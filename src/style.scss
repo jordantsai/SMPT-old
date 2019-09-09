@@ -1,6 +1,29 @@
 $primary: #025272;
 $secondary: #6797AA;
 
+@font-face {
+    font-family: "Fivo Sans Medium";
+    src: url("../font/FivoSans-Medium.otf");
+}
+
+@font-face {
+    font-family: "Fivo Sans Regular";
+    src: url("../font/FivoSans-Regular.otf");
+}
+
+html {
+    font-family: "Fivo Sans Regular", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fivo Sans Medium", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
