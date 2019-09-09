@@ -165,6 +165,7 @@ nav {
         position: fixed;
         bottom: 8px;
         right: 8px;
+
         a {
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
@@ -182,10 +183,12 @@ nav {
         overflow: hidden;
         width: 50vw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        transition: height 0.5s ease;
+        transition: height 0.3s ease;
+
         .container {
             padding: 0;
         }
+
         ul {
             flex-direction: column;
         }
@@ -210,12 +213,34 @@ nav {
         border-bottom: 1px solid $primary;
         border-left: 1px solid $primary;
     }
+
+    #nav-trigger div {
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+
+    .close {
+        div {
+            visibility: hidden;
+        }
+
+        div:last-child {
+            visibility: visible;
+            transform: rotate(-33deg);
+        }
+
+        div:first-child {
+            visibility: visible;
+            transform: rotate(33deg);
+        }
+    }
 }
 
 @media only screen and (max-width: 500px) {
     nav {
         width: 100vw;
     }
+
     .open,
     nav:focus-within {
         border-left: none;
