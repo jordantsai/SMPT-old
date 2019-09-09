@@ -42,11 +42,21 @@ header {
 
 .logo {
     height: 100px;
+    padding: 8px 0;
 
     img {
         height: 100%;
     }
 }
+
+#title {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: $primary;
+    width: 100%;
+}
+
 
 .actions a:first-child {
     background-color: $primary;
@@ -104,26 +114,22 @@ nav {
     display: none;
 }
 
-
-
-
-
 .sr-only {
-    position: absolute !important;
-    left: -100vw !important;
-    height: 1px !important;
-    width: 1px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
+    position: absolute;
+    left: -100vw;
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .sr-only-focusable:focus,
 .sr-only-focusable:active {
-    position: relative !important;
-    left: 0 !important;
+    position: relative;
+    left: 0;
     z-index: 999;
-    height: auto !important;
-    width: auto !important;
-    white-space: normal !important;
-    overflow: visible !important;
+    height: auto;
+    width: auto;
+    white-space: normal;
+    overflow: visible;
 }
