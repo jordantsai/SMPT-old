@@ -47,12 +47,11 @@
 <body>
     <header>
         <div class="top-bar">
-            <div class="container">
-                <div class="logo">
+            <div class="col">
+                <div role="presentation" class="logo">
                     <img role="presentation" src="./assets/img/logo570x220.png" alt="SMPT logo Santa Monica Physical Therapy, Orthopedic & Sports Physical Therapy">
-                    <h1 id="title" class="sr-only sr-only-focusable" tabindex="0">Santa Monica Physical Therapy Orthopedic & Sports Physical Therapy</h1>
                 </div>
-                <a id="skip-nav" class="sr-only sr-only-focusable" href="#top">skip navigation</a>
+                <a id="skip-nav" class="sr-only sr-only-focusable" href="#title">skip navigation</a>
                 <div class="actions">
                     <a href="./contact.html">Request Appointment</a>
                     <a href="tel:310-828-2188">310-828-2188</a>
@@ -65,7 +64,7 @@
             </div>
         </div>
         <nav id="nav-collapse">
-            <ul  class="container" role="menu">
+            <ul class="col" role="menu">
                 <li role="presentation"><a role="menuitem" href="./">Home</a></li>
                 <li role="presentation"><a role="menuitem" href="./services.html">Services</a></li>
                 <li role="presentation"><a role="menuitem" href="./contact.html">Contact Us</a></li>
@@ -73,9 +72,37 @@
         </nav>
     </header>
     <main>
-        <section>
+        <a id="#top"></a>
+        <section class="carousel-wrapper">
+            <div class="carousel">
+                <img class="carousel-slide previous-slide" src="./assets/img/slide1-demo.jpg" alt="">
+                <img class="carousel-slide next-slide" src="./assets/img/slide2-demo.jpg" alt="">
+                <img class="carousel-slide" src="./assets/img/slide3-demo.jpg" alt="">
+                <img class="carousel-slide" src="./assets/img/slide4-demo.jpg" alt="">
+            </div>
+            <div class="carousel-overlay">
+                <h1 id="title" class="" tabindex="0">Santa Monica Physical Therapy<br>Orthopedic & Sports Physical Therapy</h1>
+            </div>
+            <div class="carousel-arrow carousel-left">
+                <div role="button">
+                    <div role="presentation"></div>
+                    <div role="presentation"></div>
+                </div>
+            </div>
+            <div class="carousel-arrow carousel-right">
+                <div role="button">
+                    <div role="presentation"></div>
+                    <div role="presentation"></div>
+                </div>
+            </div>
 
         </section>
+        <div class="alt-background row">
+            <section class="about col">
+                <h2>About</h2>
+                Santa Monica Physical Therapy (formerly Gail Wehner Physical Therapy) is a clinic that focuses on what matters most: the patient. We pride ourselves in providing those in our care one-on-one treatment for an hour without using any aides or PT Assistants in order to give you the best possible treatment. We will help you return to the things you love doing with a combination of manual therapy, education on how your body functions, and graded therapeutic exercises to improve the way you move.
+            </section>
+        </div>
     </main>
     <footer>
     </footer>
