@@ -1,3 +1,5 @@
+// Global styling
+
 $primary: #025272;
 $secondary: #6797AA;
 
@@ -24,11 +26,42 @@ h6 {
     font-family: "Fivo Sans Medium", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+// Accessibility
+
+*:focus {
+    outline: dotted 2px $secondary;
+    outline-offset: 2px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-decoration: underline !important;
+}
+
+.sr-only {
+    position: absolute;
+    left: -100vw;
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    position: relative;
+    left: 0;
+    z-index: 999;
+    height: auto;
+    width: auto;
+    white-space: normal;
+    overflow: visible;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 8px;
 }
+
+// Header & Navigation
 
 header {
     position: sticky;
@@ -38,6 +71,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 3px 3px #1440521a;
 }
 
 .logo {
@@ -57,6 +91,9 @@ header {
     width: 100%;
 }
 
+#skip-nav {
+    color: $primary;
+}
 
 .actions a:first-child {
     background-color: $primary;
@@ -112,24 +149,75 @@ nav {
 
 .menu-icon {
     display: none;
+    padding: 12px;
 }
 
-.sr-only {
-    position: absolute;
-    left: -100vw;
-    height: 1px;
-    width: 1px;
-    white-space: nowrap;
-    overflow: hidden;
+.menu-icon-bar {
+    width: 26px;
+    height: 2px;
+    background-color: $primary;
+    margin: 5px 0;
 }
 
-.sr-only-focusable:focus,
-.sr-only-focusable:active {
-    position: relative;
-    left: 0;
-    z-index: 999;
-    height: auto;
-    width: auto;
-    white-space: normal;
-    overflow: visible;
+@media only screen and (max-width: 900px) {
+
+    .actions {
+        position: fixed;
+        bottom: 8px;
+        right: 8px;
+        a {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        width: 50vw;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: height 0.5s ease;
+        .container {
+            padding: 0;
+        }
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            border-color: $primary;
+            border-bottom: 1px solid white;
+            height: 48px;
+            line-height: 48px;
+            width: 100%;
+            text-align: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .open,
+    nav:focus-within {
+        height: 144px;
+        border-bottom: 1px solid $primary;
+        border-left: 1px solid $primary;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        width: 100vw;
+    }
+    .open,
+    nav:focus-within {
+        border-left: none;
+    }
 }
