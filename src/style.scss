@@ -31,6 +31,10 @@ h6 {
 *:focus {
     outline: dotted 2px $secondary;
     outline-offset: 2px;
+}
+
+a:focus,
+button:focus {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: underline !important;
 }
@@ -61,11 +65,42 @@ h6 {
     padding: 0 8px;
 }
 
+.row {
+    padding: 64px 0;
+}
+
+.prim-section {
+    background-color: hsla(197, 5%, 95%, 1);
+    color: hsla(197, 5%, 5%, 1);
+    h2 {
+        color: $primary;
+    }
+}
+
+.alt-section {
+    background-color: hsla(197, 15%, 15%, 1);
+    color: hsla(197, 15%, 85%, 1);
+    h2{
+        color: $secondary;
+    }
+}
+
+.br-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .br-mobile {
+        display: unset;
+    }
+}
+
 // Header & Navigation
 
 header {
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .top-bar {
@@ -188,6 +223,7 @@ nav {
         width: 50vw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         transition: height 0.3s ease;
+
         .close {
             padding: 0;
         }
@@ -248,6 +284,10 @@ nav {
     nav:focus-within {
         border-left: none;
     }
+
+    .actions a {
+        width: 124px;
+    }
 }
 
 .carousel-wrapper {
@@ -268,8 +308,23 @@ nav {
     object-fit: cover;
 }
 
+.carousel-previous {
+    z-index: 3;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.carousel-current {
+    z-index: 2;
+}
+
+.carousel-next {
+    z-index: 1;
+}
+
 .carousel-overlay {
     position: absolute;
+    z-index: 4;
     top: 0;
     height: 100%;
     width: 100%;
@@ -282,6 +337,7 @@ nav {
 
 .carousel-arrow {
     position: absolute;
+    z-index: 5;
     top: 0;
     height: 100%;
     width: 48px;
@@ -302,6 +358,7 @@ nav {
     height: 4px;
     background-color: $secondary;
     border-bottom: 2px solid hsla(197, 85%, 10%, 0.3);
+
     button {
         padding: 16px 8px 24px;
     }
@@ -343,28 +400,35 @@ nav {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     .carousel-wrapper {
         height: calc(100vh - 100px);
     }
+    #title {
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #title {
+        font-size: 30px;
+    }
+    .carousel-arrow>div>div{
+        width: 24px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #title {
+        font-size: 24px;
+    }
 }
 
-.row {
-    padding: 64px 0;
-} 
-
-.alt-background {
-    background-color: hsla(197, 15%, 15%, 1);
-    color: hsla(197, 15%, 85%, 1);
-}
-
-.about{
+.about {
     padding: 0 48px;
     text-align: center;
     line-height: 2;
-    h2{
+
+    h2 {
         font-size: 36px;
         margin-bottom: 0.5em;
-        color: $secondary;
     }
 }
