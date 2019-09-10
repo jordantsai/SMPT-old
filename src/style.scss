@@ -19,10 +19,8 @@ html {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3
+    {
     font-family: "Fivo Sans Medium", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -69,9 +67,26 @@ button:focus {
     padding: 64px 0;
 }
 
+.sections {
+    padding: 0 48px;
+    text-align: center;
+    line-height: 2;
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 16px;
+    }
+}
+
 .prim-section {
     background-color: hsla(197, 5%, 95%, 1);
     color: hsla(197, 5%, 5%, 1);
+
     h2 {
         color: $primary;
     }
@@ -80,7 +95,8 @@ button:focus {
 .alt-section {
     background-color: hsla(197, 15%, 15%, 1);
     color: hsla(197, 15%, 85%, 1);
-    h2{
+
+    h2 {
         color: $secondary;
     }
 }
@@ -92,6 +108,18 @@ button:focus {
 @media only screen and (max-width: 900px) {
     .br-mobile {
         display: unset;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .sections {
+        padding: 0 24px;
+        line-height: 1.75;
+
+        h2 {
+            font-size: 28px;
+        }
     }
 }
 
@@ -357,7 +385,7 @@ nav {
     width: 32px;
     height: 4px;
     background-color: $secondary;
-    border-bottom: 2px solid hsla(197, 85%, 10%, 0.3);
+    border-bottom: 2px solid hsla(197, 28%, 44%, .5);
 
     button {
         padding: 16px 8px 24px;
@@ -404,31 +432,79 @@ nav {
     .carousel-wrapper {
         height: calc(100vh - 100px);
     }
+
     #title {
         font-size: 36px;
     }
 }
+
 @media only screen and (max-width: 500px) {
     #title {
         font-size: 30px;
     }
-    .carousel-arrow>div>div{
+
+    .carousel-arrow>div>div {
         width: 24px;
     }
 }
+
 @media only screen and (max-width: 400px) {
     #title {
         font-size: 24px;
     }
 }
 
-.about {
-    padding: 0 48px;
-    text-align: center;
-    line-height: 2;
 
-    h2 {
-        font-size: 36px;
-        margin-bottom: 0.5em;
+
+.services {
+
+    li,
+    h3 {
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    li {
+        line-height: 1.5;
+
+    }
+}
+
+.box {
+    margin: -16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    >div {
+        padding: 16px;
+    }
+}
+
+
+.person {
+    img {
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    h4 {
+        font-size: 16px;
+        width: 150px;
+        line-height: 1.25;
+    }
+}
+
+.insurance{
+    li{
+        padding: 8px;
+    }
+    img{
+        width: 150px;
+        vertical-align: middle;
+    }
+    p{
+        margin-top: 16px;
     }
 }
