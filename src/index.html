@@ -72,32 +72,33 @@
         </nav>
     </header>
     <main>
-        <a id="#top"></a>
         <section class="carousel-wrapper">
             <div class="carousel">
-                <img class="carousel-slide previous-slide" src="./assets/img/slide1-demo.jpg" alt="">
-                <img class="carousel-slide next-slide" src="./assets/img/slide2-demo.jpg" alt="">
-                <img class="carousel-slide" src="./assets/img/slide3-demo.jpg" alt="">
-                <img class="carousel-slide" src="./assets/img/slide4-demo.jpg" alt="">
+                <!-- each slide needs a id for carousel to function -->
+                <!-- id needs to be unique but can be named anything -->
+                <img id="slide-1" class="carousel-slide" src="./assets/img/slide1-demo.jpg" alt="">
+                <img id="slide-2" class="carousel-slide" src="./assets/img/slide2-demo.jpg" alt="">
+                <img id="slide-3" class="carousel-slide" src="./assets/img/slide3-demo.jpg" alt="">
+                <img id="slide-4" class="carousel-slide" src="./assets/img/slide4-demo.jpg" alt="">
             </div>
             <div class="carousel-overlay">
-                <h1 id="title" class="" tabindex="0">Santa Monica Physical Therapy<br>Orthopedic & Sports Physical Therapy</h1>
+                <h1 id="title" class="" tabindex="0">Santa Monica<br class="br-mobile"> Physical Therapy<br>Orthopedic & Sports<br class="br-mobile"> Physical Therapy</h1>
             </div>
             <div class="carousel-arrow carousel-left">
-                <div role="button">
+                <div role="button" tabindex="0" aria-label="slideshow left arrow" onclick="previousSlide()">
                     <div role="presentation"></div>
                     <div role="presentation"></div>
                 </div>
             </div>
             <div class="carousel-arrow carousel-right">
-                <div role="button">
+                <div role="button" tabindex="0" aria-label="slideshow right arrow" onclick="nextSlide()">
                     <div role="presentation"></div>
                     <div role="presentation"></div>
                 </div>
             </div>
 
         </section>
-        <div class="alt-background row">
+        <div class="alt-section row">
             <section class="about col">
                 <h2>About</h2>
                 Santa Monica Physical Therapy (formerly Gail Wehner Physical Therapy) is a clinic that focuses on what matters most: the patient. We pride ourselves in providing those in our care one-on-one treatment for an hour without using any aides or PT Assistants in order to give you the best possible treatment. We will help you return to the things you love doing with a combination of manual therapy, education on how your body functions, and graded therapeutic exercises to improve the way you move.
