@@ -28,11 +28,6 @@ h1, h2, h3 {
     outline-offset: 2px;
 }
 
-a:focus, button:focus {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    text-decoration: underline !important;
-}
-
 .sr-only {
     position: absolute;
     left: -100vw;
@@ -185,12 +180,22 @@ header {
         text-align: center;
         color: white;
         text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a:hover, a:focus {
+        transform: translate(0, -1px);
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    a:active {
+        transform: translate(0, 1px);
+        box-shadow: none;
     }
 }
 
 nav {
     background-color: $secondary;
-    height: 48px;
 
     ul {
         height: 100%;
@@ -199,13 +204,17 @@ nav {
         align-items: center;
     }
 
-    li {
-        padding: 0 24px;
-    }
-
     a {
+        display: inline-block;
+        padding: 0 24px;
+        line-height: 48px;
         text-decoration: none;
         color: white;
+        transition: background-color 0.5s ease;
+    }
+
+    a:hover, a:active, a:focus {
+        background-color: $primary;
     }
 }
 
@@ -225,7 +234,7 @@ nav {
 
     .actions {
         position: fixed;
-        bottom: 8px;
+        bottom: 16px;
         right: 8px;
 
         a {
@@ -258,8 +267,6 @@ nav {
         li {
             border-color: $primary;
             border-bottom: 1px solid white;
-            height: 48px;
-            line-height: 48px;
             width: 100%;
             text-align: center;
         }
@@ -267,6 +274,13 @@ nav {
         li:last-child {
             border-bottom: none;
         }
+
+        a {
+            height: 48px;
+            line-height: 48px;
+            width: 100%;
+        }
+
     }
 
     .open, nav:focus-within {
@@ -357,7 +371,7 @@ nav {
     text-align: center;
 }
 
-.carousel-arrow {
+.carousel-control {
     position: absolute;
     z-index: 5;
     top: 0;
@@ -366,30 +380,30 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    button {
-        font-weight: bold;
-        font-size: 48px;
-        background: transparent;
-        border: none;
+.carousel-arrow {
+    padding: 16px 8px 24px;
+    transition: transform 0.3s, border-bottom 0.3s, height 0.3s;
+    div {
+        width: 32px;
+        height: 4px;
+        background-color: $secondary;
     }
 }
 
-.carousel-arrow>div>div {
-    width: 32px;
-    height: 4px;
-    background-color: $secondary;
+.carousel-arrow:hover, .carousel-arrow:focus {
+    transform: translate(0, -1px);
+    div {
+    height: 5px;
     border-bottom: 2px solid hsla(197, 28%, 44%, .5);
-
-    button {
-        padding: 16px 8px 24px;
     }
 }
 
-.carousel-left {
+.carousel-control-left {
     left: 0;
 
-    >div {
+    .carousel-arrow {
         div:first-child {
             transform-origin: left;
             transform: rotate(-45deg) translate(-5px, 5px);
@@ -404,10 +418,10 @@ nav {
     }
 }
 
-.carousel-right {
+.carousel-control-right {
     right: 0;
 
-    >div {
+    .carousel-arrow {
         div:first-child {
             transform-origin: right;
             transform: rotate(45deg) translate(5px, 5px);
@@ -546,7 +560,7 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
-    .check-group{
+    .check-group {
         padding: 24px;
     }
 }
