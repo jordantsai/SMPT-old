@@ -17,10 +17,7 @@ html {
     font-family: "Fivo Sans Regular", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1,
-h2,
-h3
-    {
+h1, h2, h3 {
     font-family: "Fivo Sans Medium", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -31,8 +28,7 @@ h3
     outline-offset: 2px;
 }
 
-a:focus,
-button:focus {
+a:focus, button:focus {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: underline !important;
 }
@@ -46,8 +42,7 @@ button:focus {
     overflow: hidden;
 }
 
-.sr-only-focusable:focus,
-.sr-only-focusable:active {
+.sr-only-focusable:focus, .sr-only-focusable:active {
     position: relative;
     left: 0;
     z-index: 999;
@@ -274,9 +269,8 @@ nav {
         }
     }
 
-    .open,
-    nav:focus-within {
-        height: 144px;
+    .open, nav:focus-within {
+        height: 192px;
         border-bottom: 1px solid $primary;
         border-left: 1px solid $primary;
     }
@@ -454,19 +448,14 @@ nav {
     }
 }
 
-
-
 .services {
 
-    li,
-    h3 {
-        white-space: nowrap;
+    li, h3 {
         text-align: left;
     }
 
     li {
         line-height: 1.5;
-
     }
 }
 
@@ -482,7 +471,6 @@ nav {
     }
 }
 
-
 .person {
     img {
         height: 150px;
@@ -496,15 +484,95 @@ nav {
     }
 }
 
-.insurance{
-    li{
+.insurance {
+    li {
         padding: 8px;
     }
-    img{
+
+    img {
         width: 150px;
         vertical-align: middle;
     }
-    p{
+
+    p {
         margin-top: 16px;
+    }
+}
+
+.contact {
+
+    form {
+        padding-top: 64px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 96px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 8px;
+        background-color: $primary;
+        border: 1px solid white;
+        color: white;
+        border-radius: 4px;
+    }
+
+    label {
+        text-align: center;
+        padding: 0 8px;
+    }
+
+    input, select {
+        display: block;
+        height: 24px;
+        width: 300px;
+        border: 1px solid hsla(197, 15%, 15%, 1);
+        border-radius: 4px;
+    }
+}
+
+.check-group {
+    padding: 48px;
+}
+
+#contact-terms {
+    display: inline-block;
+    height: unset;
+    width: unset;
+}
+
+@media only screen and (max-width: 500px) {
+    .check-group{
+        padding: 24px;
+    }
+}
+
+.location {
+    h3 {
+        font-size: 18px;
+        color: #6797aa;
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: hsla(197, 10%, 55%, 1);
+
+    iframe {
+        width: 100%;
+        height: 450px;
+    }
+
+    li {
+        padding: 16px;
+    }
+
+    a {
+        color: hsla(197, 20%, 55%, 1);
     }
 }
