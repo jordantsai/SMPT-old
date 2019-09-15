@@ -9,7 +9,7 @@
     "copy": "cpx \"src/{*.html,CNAME,assets/**/*}\" publish -u",
     "sass": "node-sass src/style.scss build/style.css",
     "autoprefix": "postcss build -u autoprefixer -d publish/assets/css",
-    "babel": "babel src/app.js --out-file publish/assets/js/app.js --presets=@babel/preset-env",
+    "babel": "babel src --out-dir publish/assets/js --presets=@babel/preset-env",
     "build": "npm run clean && npm run copy && npm run sass && npm run autoprefix && npm run babel",
     "deploy": "gh-pages -d publish"
   },
