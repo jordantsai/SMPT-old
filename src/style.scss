@@ -231,6 +231,7 @@ nav {
 .menu-icon {
     display: none;
     padding: 12px;
+    cursor: pointer;
 }
 
 .menu-icon-bar {
@@ -332,7 +333,7 @@ nav {
     }
 
     .actions a {
-        width: 124px;
+        width: 128px;
     }
 }
 
@@ -400,6 +401,7 @@ nav {
 .carousel-arrow {
     padding: 16px 8px 24px;
     transition: transform 0.3s, border-bottom 0.3s, height 0.3s;
+    cursor: pointer;
 
     div {
         width: 32px;
@@ -511,7 +513,7 @@ nav {
     }
 }
 
-.services {
+.services-list {
 
     li, h3 {
         text-align: left;
@@ -643,6 +645,7 @@ nav {
         width: 300px;
         border: 1px solid hsla(197, 15%, 15%, 1);
         border-radius: 4px;
+        background-color: white;
     }
 }
 
