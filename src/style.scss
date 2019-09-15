@@ -547,6 +547,54 @@ nav {
     }
 }
 
+.staff-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff {
+  display: flex;
+  flex-direction: column; 
+}
+
+.profile{
+    margin-bottom: 24px;
+    display: flex;
+    
+    .bio {
+        margin-bottom: 24px;
+        text-align: left;
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 1.2;
+        flex-grow: 1;
+    }
+    h3{
+        margin: 0 0 1em 0;
+        font-size: 24px;
+    }
+    li{
+        margin-bottom: .5em;
+    }
+    img{
+        height: 300px;
+        border-radius: 4px;
+        margin-bottom: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        .bio{
+            text-align: center;
+        }
+    }
+}
+
 .insurance {
     li {
         padding: 8px;
