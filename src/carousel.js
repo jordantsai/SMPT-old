@@ -33,9 +33,9 @@ function nextSlide() {
     if (i < slidesArr.length - 1) {
         // if at end of slide list, go to beginning
         document.getElementById(slidesArr[i + 1]).classList = 'carousel-slide carousel-next'
-        document.getElementById(slidesArr[i + 1]).removeAttribute('aria-hidden') = 'carousel-slide carousel-next'
+        document.getElementById(slidesArr[i + 1]).removeAttribute('aria-hidden')
         document.getElementById(slidesArr[i]).classList = 'carousel-slide carousel-previous'
-        document.getElementById(slidesArr[i]).setAttribute('aria-hidden', true) = 'carousel-slide carousel-previous'
+        document.getElementById(slidesArr[i]).setAttribute('aria-hidden', true)
     } else {
         // advance one slide 
         document.getElementById(slidesArr[0]).classList = 'carousel-slide carousel-next'
