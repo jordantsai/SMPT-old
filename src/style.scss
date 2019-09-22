@@ -17,6 +17,7 @@ html {
     font-family: "Fivo Sans Regular", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+
 h1, h2, h3 {
     font-family: "Fivo Sans Medium", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -47,10 +48,15 @@ h1, h2, h3 {
     overflow: visible;
 }
 
+// Body 
+
+body {
+    margin-top: 148px;
+}
+
 .col {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 8px;
 }
 
 .row {
@@ -91,11 +97,31 @@ h1, h2, h3 {
     }
 }
 
+.box {
+    margin: -16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    >* {
+        padding: 16px;
+    }
+}
+
 .br-mobile {
     display: none;
 }
 
 @media only screen and (max-width: 900px) {
+    body {
+        margin-top: 100px;
+    }
+
+    .sections {
+        padding: 0 24px;
+    }
+
     .br-mobile {
         display: unset;
     }
@@ -104,26 +130,42 @@ h1, h2, h3 {
 @media only screen and (max-width: 500px) {
 
     .sections {
-        padding: 0 24px;
+        padding: 0 16px;
         line-height: 1.75;
 
         h2 {
             font-size: 28px;
         }
     }
+
+    .box>* {
+        padding: 12px;
+    }
 }
 
-// Header & Navigation
+@media only screen and (max-width: 400px) {
+    .sections {
+        padding: 0 8px;
+    }
 
-header {
-    position: sticky;
+    .box>* {
+        padding: 8px;
+    }
+}
+
+// HEADER & NAVIGATION
+
+.fixed-top {
+    position: fixed;
     top: 0;
     z-index: 10;
+    width: 100%;
 }
 
 .top-bar {
     box-shadow: 0px 3px 3px #1440521a;
     background: white;
+    padding: 0 8px;
 }
 
 .top-bar>div {
@@ -204,7 +246,7 @@ header {
     }
 }
 
-nav {
+#nav-collapse {
     background-color: $secondary;
 
     ul {
@@ -257,7 +299,7 @@ nav {
         display: block;
     }
 
-    nav {
+    #nav-collapse {
         position: fixed;
         top: 100px;
         right: 0;
@@ -294,7 +336,14 @@ nav {
 
     }
 
-    .open, nav:focus-within {
+    .open#nav-collapse {
+        height: 192px;
+        border-bottom: 1px solid $primary;
+        border-left: 1px solid $primary;
+    }
+
+    // separate selector, Edge browser breaks other selectors with focus-within 
+    #nav-collapse:focus-within {
         height: 192px;
         border-bottom: 1px solid $primary;
         border-left: 1px solid $primary;
@@ -323,12 +372,12 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
-    nav {
+    #nav-collapse {
         width: 100vw;
     }
 
-    .open,
-    nav:focus-within {
+    #nav-collapse.open,
+    #nav-collapse:focus-within {
         border-left: none;
     }
 
@@ -336,6 +385,8 @@ nav {
         width: 128px;
     }
 }
+
+// CAROUSEL & TITLE
 
 .carousel-wrapper {
     position: relative;
@@ -355,12 +406,10 @@ nav {
 
 .carousel-slide {
     position: absolute;
-    // negative position to hide blurred edges
-    top: -2px;
-    left: -2px;
-    filter: blur(1px) brightness(0.7);
-    height: calc(100% + 4px);
-    width: calc(100% + 4px);
+    top: 0;
+    filter: brightness(0.6);
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -467,6 +516,7 @@ nav {
 
     .vh-50 {
         height: calc(50vh - 50px);
+
         #title {
             margin-bottom: .2em;
             line-height: 1.2;
@@ -503,7 +553,7 @@ nav {
         font-size: 30px;
     }
 
-    .carousel-arrow>div>div {
+    .carousel-arrow>div {
         width: 24px;
     }
 }
@@ -518,6 +568,47 @@ nav {
     }
 }
 
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    // internet explorer fixes
+    .carousel-slide {
+        height: auto;
+    }
+
+    #nav-trigger {
+        display: none;
+    }
+
+    #nav-collapse {
+        position: static !important;
+        height: auto;
+        width: 100%;
+
+        ul {
+            flex-direction: row;
+            border-bottom: none;
+        }
+
+        li {
+            width: auto;
+            border-bottom: none;
+        }
+    }
+
+    .actions {
+        position: static;
+    }
+}
+
+// SECTIONS & MAIN CONTENT
+
+.scroll-padding {
+    padding-top: 148px;
+    margin-top: -148px;
+}
+
 .services-list {
 
     li, h3 {
@@ -529,46 +620,35 @@ nav {
     }
 }
 
-.box {
-    margin: -16px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-
-    >div {
-        padding: 16px;
-    }
-}
-
 .person {
+    box-sizing: content-box;
+    font-size: 16px;
+    width: 155px;
+    line-height: 1.25;
+
     img {
-        height: 150px;
+        display: block;
+        width: 100%;
         border-radius: 50%;
     }
 
-    h4 {
-        font-size: 16px;
-        width: 150px;
-        line-height: 1.25;
-    }
 }
 
-.staff-wrap{
+.staff-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .staff {
-  display: flex;
-  flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
-.profile{
+.profile {
     margin-bottom: 24px;
     display: flex;
-    
+
     .bio {
         margin-bottom: 24px;
         text-align: left;
@@ -577,29 +657,22 @@ nav {
         line-height: 1.2;
         flex-grow: 1;
     }
-    h3{
+
+    h3 {
         margin: 0 0 1em 0;
         font-size: 24px;
     }
-    li{
+
+    li {
         margin-bottom: .5em;
     }
-    img{
+
+    img {
         height: 300px;
         border-radius: 4px;
         margin-bottom: 24px;
     }
 
-}
-
-@media only screen and (max-width: 900px) {
-    .profile {
-        flex-direction: column;
-        align-items: center;
-        .bio{
-            text-align: center;
-        }
-    }
 }
 
 .insurance {
@@ -612,8 +685,10 @@ nav {
         vertical-align: middle;
     }
 
-    p {
+    small {
+        display: inline-block;
         margin-top: 16px;
+        font-size: 14px;
     }
 }
 
@@ -664,11 +739,38 @@ nav {
     width: unset;
 }
 
-@media only screen and (max-width: 500px) {
-    .check-group {
-        padding: 24px;
+@media only screen and (max-width: 900px) {
+    .scroll-padding {
+        padding-top: 100px;
+        margin-top: -100px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+
+        .bio {
+            text-align: center;
+        }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .scroll-padding {
+        padding-top: 100px;
+        margin-top: -100px;
+    }
+
+    .person {
+        width: 140px;
+
+        .check-group {
+            padding: 24px;
+        }
+    }
+}
+
+// FOOTER
 
 .location {
     h3 {
