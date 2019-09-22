@@ -42,32 +42,33 @@
 
 <body>
     <header>
-        <div class="top-bar">
-            <div class="col">
-                <div role="presentation" class="logo">
-                    <img role="presentation" src="./assets/img/logo570x220.png" alt="SMPT logo Santa Monica Physical Therapy, Orthopedic & Sports Physical Therapy">
-                </div>
-                <a id="skip-nav" class="sr-only sr-only-focusable" href="#title">skip navigation</a>
-                <div class="actions">
-                    <a href="tel:310-828-2188">310-828-2188</a>
-                </div>
-                <div id="nav-trigger" role="presentation" class="menu-icon" onclick="openMenu()">
-                    <div role="presentation" class="menu-icon-bar"></div>
-                    <div role="presentation" class="menu-icon-bar"></div>
-                    <div role="presentation" class="menu-icon-bar"></div>
+        <div class="fixed-top">
+            <div class="top-bar">
+                <div class="col">
+                    <div role="presentation" class="logo">
+                        <img role="presentation" src="./assets/img/logo570x220.png" alt="SMPT logo Santa Monica Physical Therapy, Orthopedic & Sports Physical Therapy">
+                    </div>
+                    <a id="skip-nav" class="sr-only sr-only-focusable" href="#title">skip navigation</a>
+                    <div class="actions">
+                        <a href="tel:310-828-2188">310-828-2188</a>
+                    </div>
+                    <div id="nav-trigger" role="presentation" class="menu-icon" onclick="openMenu()">
+                        <div role="presentation" class="menu-icon-bar"></div>
+                        <div role="presentation" class="menu-icon-bar"></div>
+                        <div role="presentation" class="menu-icon-bar"></div>
+                    </div>
                 </div>
             </div>
+            <nav id="nav-collapse" role="navigation" aria-label="website">
+                <ul role="menu" aria-label="main">
+                    <li><a role="menuitem" href="./">Home</a></li>
+                    <li><a role="menuitem" href="./services.html">Services</a></li>
+                    <li><a role="menuitem" href="./staff.html">Staff</a></li>
+                    <li><a role="menuitem" href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="nav-collapse">
-            <ul role="menu">
-                <li role="presentation"><a role="menuitem" href="./">Home</a></li>
-                <li role="presentation"><a role="menuitem" href="./services.html">Services</a></li>
-                <li role="presentation"><a role="menuitem" href="./staff.html">Staff</a></li>
-                <li role="presentation"><a role="menuitem" href="./contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+
         <section class="carousel-wrapper vh-50">
             <div class="carousel">
                 <img id="slide-1" class="carousel-slide" src="./assets/img/contact.jpg" alt="doctor taking notes. phone receiving message">
@@ -77,10 +78,16 @@
                 <p class="title-sub">Santa Monica<br class="br-mobile"> Physical Therapy</p>
             </div>
         </section>
+    </header>
+    <main role="main">
         <div class="alt-section row">
-            <section class="sections insurance col">
+            <section class="sections new-patient col">
                 <h2>New patients</h2>
                 Your first visit will primarily be an initial evaluation to determine specific impairments and to establish goals. All appointments are approximately one hour in length. Please wear comfortable clothes that can adequately expose areas for examination. Please bring your insurance card, photo ID, prescription for physical therapy, and any copies of surgical reports or imaging (MRI, CT, X-Ray). You may arrive 10 minutes early to fill out forms or fill them out ahead of time by downloading the forms here.
+                <a href="./assets/download/SMPTIntakeForms.pdf">
+                    <span class="sr-only">intake form pdf</span>
+                    <img role="presentation" src="./assets/img/pdf-icon-white-96x96.png" alt="pdf document">
+                </a>
             </section>
         </div>
 
@@ -150,45 +157,45 @@
             </section>
         </div>
     </main>
-    <footer class="alt-section">
+    <footer class="alt-section" role="contentinfo">
         <div class="row">
-            <section class="sections location col">
-                <h2>Location</h2>
+            <section role="region" aria-labelledby="h-location" class="sections location col scroll-padding">
+                <h2 id="h-location">Location</h2>
                 <div class="box">
                     <div>
                         <h3>Address</h3>
-                        <p>
+                        <address aria-label="location street address">
                             1821 Wilshire Blvd. Ste 400<br>
                             Santa Monica, CA 90403
-                        </p>
+                        </address>
                     </div>
                     <div>
-                        <h3>Hours</h3>
-                        <p>
+                        <h3 id="h-hours">Hours</h3>
+                        <p aria-labelledby="h-location h-hours">
                             Monday - Friday<br>
                             7AM - 6PM
                         </p>
                     </div>
                     <div>
-                        <h3>Phone</h3>
-                        <p>
+                        <h3 id="h-phone">Phone</h3>
+                        <address aria-labelledby="h-location h-phone">
                             (310) 828-2188
-                        </p>
+                        </address>
                     </div>
                 </div>
             </section>
         </div>
-        <iframe title="Google Maps location" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=1821+Wilshire+Blvd%2C+Suite+400%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
-        <div class="row">
-            <div class="col">
-                <ul class="col box" role="menu">
-                    <li role="presentation"><a role="menuitem" href="./">Home</a></li>
-                    <li role="presentation"><a role="menuitem" href="./services.html">Services</a></li>
-                    <li role="presentation"><a role="menuitem" href="./staff.html">Staff</a></li>
-                    <li role="presentation"><a role="menuitem" href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
+        <iframe role="region" title="Google Maps location" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=1821+Wilshire+Blvd%2C+Suite+400%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
+        <nav class="row" role="navigation" aria-label="website">
+
+            <ul class="box" role="menu" aria-label="main">
+                <li><a role="menuitem" href="./">Home</a></li>
+                <li><a role="menuitem" href="./services.html">Services</a></li>
+                <li><a role="menuitem" href="./staff.html">Staff</a></li>
+                <li><a role="menuitem" href="./contact.html">Contact Us</a></li>
+            </ul>
+
+        </nav>
         © 2019
     </footer>
     <script src="./assets/js/app.js"></script>

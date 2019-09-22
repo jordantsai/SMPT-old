@@ -81,37 +81,37 @@
 
 <body>
     <header>
-        <div class="top-bar">
-            <div class="col">
-                <div role="presentation" class="logo">
-                    <img role="presentation" src="./assets/img/logo570x220.png" alt="SMPT logo Santa Monica Physical Therapy, Orthopedic & Sports Physical Therapy">
-                </div>
-                <a id="skip-nav" class="sr-only sr-only-focusable" href="#title">skip navigation</a>
-                <div class="actions">
-                    <a href="./contact.html">Request Appointment</a>
-                    <a href="tel:310-828-2188">310-828-2188</a>
-                </div>
-                <div id="nav-trigger" role="presentation" class="menu-icon" onclick="openMenu()">
-                    <div role="presentation" class="menu-icon-bar"></div>
-                    <div role="presentation" class="menu-icon-bar"></div>
-                    <div role="presentation" class="menu-icon-bar"></div>
+        <div class="fixed-top">
+            <div class="top-bar">
+                <div class="col">
+                    <div role="presentation" class="logo">
+                        <img role="presentation" src="./assets/img/logo570x220.png" alt="SMPT logo Santa Monica Physical Therapy, Orthopedic & Sports Physical Therapy">
+                    </div>
+                    <a id="skip-nav" class="sr-only sr-only-focusable" href="#title">skip navigation</a>
+                    <div class="actions">
+                        <a href="./contact.html">Request Appointment</a>
+                        <a href="tel:310-828-2188">310-828-2188</a>
+                    </div>
+                    <div id="nav-trigger" tabindex="0" role="presentation" class="menu-icon" onclick="openMenu()">
+                        <div role="presentation" class="menu-icon-bar"></div>
+                        <div role="presentation" class="menu-icon-bar"></div>
+                        <div role="presentation" class="menu-icon-bar"></div>
+                    </div>
                 </div>
             </div>
+            <nav id="nav-collapse" role="navigation" aria-label="website">
+                <ul role="menu" aria-label="main">
+                    <li><a role="menuitem" href="./">Home</a></li>
+                    <li><a role="menuitem" href="./services.html">Services</a></li>
+                    <li><a role="menuitem" href="./staff.html">Staff</a></li>
+                    <li><a role="menuitem" href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="nav-collapse" aria-label="site">
-            <ul role="menu" aria-label="main">
-                <li role="presentation"><a role="menuitem" href="./">Home</a></li>
-                <li role="presentation"><a role="menuitem" href="./services.html">Services</a></li>
-                <li role="presentation"><a role="menuitem" href="./staff.html">Staff</a></li>
-                <li role="presentation"><a role="menuitem" href="./contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="carousel-wrapper">
+        <section role="region" class="carousel-wrapper">
             <div class="carousel">
                 <!-- each slide needs a unique id and class "carousel-slide" to function -->
-                <img id="slide-1" class="carousel-slide carousel-next" src="./assets/img/slide1-demo.jpg" alt="Manual therapy on ankle">
+                <img id="slide-1" class="carousel-slide carousel-next" src="./assets/img/slide1-demo.jpg" alt="Manual therapy on ankle"aria-hidden="true">
                 <img id="slide-2" class="carousel-slide" src="./assets/img/slide2-demo.jpg" alt="Therapist holding head of lying client" aria-hidden="true">
                 <img id="slide-3" class="carousel-slide" src="./assets/img/slide3-demo.jpg" alt="woman sitting upright on pilates reformer" aria-hidden="true">
                 <img id="slide-4" class="carousel-slide" src="./assets/img/slide4-demo.jpg" alt="masssage of hands" aria-hidden="true">
@@ -119,36 +119,39 @@
                 <img id="slide-6" class="carousel-slide" src="./assets/img/slide6-demo.jpg" alt="arm pulling handle of exercise equipment" aria-hidden="true">
             </div>
             <div class="carousel-overlay">
-                <h1 id="title" tabindex="0">Santa Monica<br class="br-mobile"> Physical Therapy</h1>
+                <h1 id="title">Santa Monica<br class="br-mobile"> Physical Therapy</h1>
                 <p class="title-sub">Orthopedic & Sports<br class="br-mobile"> Physical Therapy</p>
             </div>
             <div class="carousel-control carousel-control-left">
-                <div class="carousel-arrow" role="button" tabindex="0" aria-label="slideshow left arrow" onclick="previousSlide()">
+                <div class="carousel-arrow scroll-padding" role="button" tabindex="0" aria-label="slideshow left arrow" onclick="previousSlide()">
                     <div role="presentation"></div>
                     <div role="presentation"></div>
                 </div>
             </div>
             <div class="carousel-control carousel-control-right">
-                <div class="carousel-arrow" role="button" tabindex="0" aria-label="slideshow right arrow" onclick="nextSlide()">
+                <div class="carousel-arrow scroll-padding" role="button" tabindex="0" aria-label="slideshow right arrow" onclick="nextSlide()">
                     <div role="presentation"></div>
                     <div role="presentation"></div>
                 </div>
             </div>
-
         </section>
+    </header>
+
+    <main role="main">
+
         <div class="alt-section row">
-            <section tabindex="0" aria-labelledby="h-about" class="sections about col">
+            <section role="region" aria-labelledby="h-about" class="sections about col scroll-padding">
                 <h2 id="h-about">About</h2>
                 Santa Monica Physical Therapy (formerly Gail Wehner Physical Therapy) is a clinic that focuses on what matters most: the patient. We pride ourselves in providing those in our care one-on-one treatment for an hour without using any aides or PT Assistants in order to give you the best possible treatment. We will help you return to the things you love doing with a combination of manual therapy, education on how your body functions, and graded therapeutic exercises to improve the way you move.
             </section>
         </div>
         <div class="prim-section row">
-            <section class="sections services col">
+            <section role="region" aria-labelledby="h-services" class="sections services col scroll-padding">
                 <h2 id="h-services">Services</h2>
                 <div class="box">
                     <div>
                         <h3 id="h-care">1-TO-1 HANDS-ON DIRECT CARE</h3>
-                        <ul tabindex="0" aria-labelledby="h-services h-care">
+                        <ul aria-labelledby="h-services h-care">
                             <li>Comprehensive evaluation</li>
                             <li>Patient education</li>
                             <li>Manual Therapy</li>
@@ -167,7 +170,7 @@
                     </div>
                     <div>
                         <h3 id="h-modalities">THERAPEUTIC MODALITIES</h3>
-                        <ul tabindex="0" aria-labelledby="h-services h-modalities">
+                        <ul aria-labelledby="h-services h-modalities">
                             <li>Blood flow restriction training</li>
                             <li>Mechanical spinal traction</li>
                             <li>Electrical stimulation (TENS)</li>
@@ -184,106 +187,106 @@
             </section>
         </div>
         <div class="alt-section row">
-            <section class="sections staff col">
+            <section role="region" aria-labelledby="h-staff" class="sections col scroll-padding">
                 <h2 id="h-staff">Staff</h2>
                 <h3 id="h-pt">Physical Therapists</h3>
-                <div tabindex="0" aria-labelledby="h-staff h-pt" class="box">
-                    <div class="person">
+                <ul aria-labelledby="h-staff h-pt" class="box">
+                    <li class="person">
                         <img role="presentation" src="./assets/img/staff/jts400.jpg" alt="Jordan Tsai, PT, DPT">
-                        <h4>Jordan Tsai, PT, DPT</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/jth400.jpg" alt="Jennifer Thai, PT, DPT, OCS">
-                        <h4>Jennifer Thai, PT, DPT, OCS</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/am400.jpg" alt="Arash Maghsoodi, PT, DPT, CSCS">
-                        <h4>Arash Maghsoodi, PT, DPT, CSCS</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/hh400.jpg" alt="Hanna Hoffman, PT, DPT">
-                        <h4>Hanna Hoffman, PT, DPT</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/sc400.jpg" alt="Shiraj Chakraborty, PT, DPT, SCS, ATC, CSCS">
-                        <h4>Shiraj Chakraborty, PT, DPT, SCS, ATC, CSCS</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/ac400.jpg" alt="Alex Cascone, PT, DPT">
-                        <h4>Alex Cascone, PT, DPT</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/ai400.jpg" alt="Arian Irannejad, PT, DPT">
-                        <h4>Arian Irannejad, PT, DPT</h4>
-                    </div>
-                </div>
+                        Jordan Tsai, PT, DPT
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/jth400.jpg" alt="Jennifer Thai, PT, DPT, OCS">
+                        Jennifer Thai, PT, DPT, OCS
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/am400.jpg" alt="Arash Maghsoodi, PT, DPT, CSCS">
+                        Arash Maghsoodi, PT, DPT, CSCS
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/hh400.jpg" alt="Hanna Hoffman, PT, DPT">
+                        Hanna Hoffman, PT, DPT
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/sc400.jpg" alt="Shiraj Chakraborty, PT, DPT, SCS, ATC, CSCS">
+                        Shiraj Chakraborty, PT, DPT, SCS, ATC, CSCS
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/ac400.jpg" alt="Alex Cascone, PT, DPT">
+                        Alex Cascone, PT, DPT
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/ai400.jpg" alt="Arian Irannejad, PT, DPT">
+                        Arian Irannejad, PT, DPT
+                    </li>
+                </ul>
                 <h3 id="h-admin">Administrative</h3>
-                <div tabindex="0" aria-labelledby="h-staff h-admin" class="box">
-                    <div class="person">
-                        <img src="./assets/img/staff/nl400.jpg" alt="Nicole Lapardo, Office Manager">
-                        <h4>Nicole Lapardo, Office Manager</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/yr400.jpg" alt="Yesenia Ramirez">
-                        <h4>Yesenia Ramirez</h4>
-                    </div>
-                    <div class="person">
-                        <img src="./assets/img/staff/dl400.jpg" alt="Deneke Love">
-                        <h4>Deneke Love</h4>
-                    </div>
-                </div>
+                <ul aria-labelledby="h-staff h-admin" class="box">
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/nl400.jpg" alt="Nicole Lapardo, Office Manager">
+                        Nicole Lapardo, Office Manager
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/yr400.jpg" alt="Yesenia Ramirez">
+                        Yesenia Ramirez
+                    </li>
+                    <li class="person">
+                        <img role="presentation" src="./assets/img/staff/dl400.jpg" alt="Deneke Love">
+                        Deneke Love
+                    </li>
+                </ul>
             </section>
         </div>
         <div class="prim-section row">
-            <section class="sections insurance col">
+            <section role="region" aria-labelledby="h-insurance" class="sections insurance col">
                 <h2 id="h-insurance">Insurance</h2>
                 <ul tab-index="0" aria-labelledby="h-insurance" class="box">
-                    <li><img src="assets/img/insurance/medicare.png" alt="Medicare"> </li>
-                    <li><img src="./assets/img/insurance/blueshield.png" alt="BlueShield"></li>
-                    <li><img src="./assets/img/insurance/aetna.png" alt="Aetna"></li>
-                    <li><img src="./assets/img/insurance/bluecross.png" alt="Blue Cross">*</li>
-                    <li><img src="./assets/img/insurance/cigna.png" alt="Cigna">*</li>
+                    <li><span class="sr-only">Medicare</span><img role="presentation" src="assets/img/insurance/medicare.png" alt="Medicare logo"> </li>
+                    <li><span class="sr-only">BlueShield</span><img role="presentation" src="./assets/img/insurance/blueshield.png" alt="BlueShield logo"></li>
+                    <li><span class="sr-only">Aetna</span><img role="presentation" src="./assets/img/insurance/aetna.png" alt="Aetna logo"></li>
+                    <li><span class="sr-only">Blue Cross</span><img role="presentation" src="./assets/img/insurance/bluecross.png" alt="Blue Cross logo">*</li>
+                    <li><span class="sr-only">Cigna</span><img role="presentation" src="./assets/img/insurance/cigna.png" alt="Cigna logo">*</li>
                 </ul>
                 <small>*pending</small>
             </section>
         </div>
     </main>
-    <footer class="alt-section">
+    <footer class="alt-section" role="contentinfo">
         <div class="row">
-            <section class="sections location col">
-                <h2>Location</h2>
+            <section role="region" aria-labelledby="h-location" class="sections location col scroll-padding">
+                <h2 id="h-location">Location</h2>
                 <div class="box">
                     <div>
                         <h3>Address</h3>
-                        <address tabindex="0" aria-label="location street">
+                        <address aria-label="location street address">
                             1821 Wilshire Blvd. Ste 400<br>
                             Santa Monica, CA 90403
                         </address>
                     </div>
                     <div>
                         <h3 id="h-hours">Hours</h3>
-                        <p tabindex="0" aria-labelledby="h-hours">
+                        <p aria-labelledby="h-location h-hours">
                             Monday - Friday<br>
                             7AM - 6PM
                         </p>
                     </div>
                     <div>
                         <h3 id="h-phone">Phone</h3>
-                        <address tabindex="0" aria-labelledby="h-phone">
+                        <address aria-labelledby="h-location h-phone">
                             (310) 828-2188
                         </address>
                     </div>
                 </div>
             </section>
         </div>
-        <iframe title="Google Maps location" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=1821+Wilshire+Blvd%2C+Suite+400%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
-        <nav class="row" aria-label="site">
+        <iframe role="region" title="Google Maps location" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=1821+Wilshire+Blvd%2C+Suite+400%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
+        <nav class="row" role="navigation" aria-label="website">
 
             <ul class="box" role="menu" aria-label="main">
-                <li><a tabindex="-1" role="menuitem" href="./">Home</a></li>
-                <li><a tabindex="-1" role="menuitem" href="./services.html">Services</a></li>
-                <li><a tabindex="-1" role="menuitem" href="./staff.html">Staff</a></li>
-                <li><a tabindex="-1" role="menuitem" href="./contact.html">Contact Us</a></li>
+                <li><a role="menuitem" href="./">Home</a></li>
+                <li><a role="menuitem" href="./services.html">Services</a></li>
+                <li><a role="menuitem" href="./staff.html">Staff</a></li>
+                <li><a role="menuitem" href="./contact.html">Contact Us</a></li>
             </ul>
 
         </nav>
