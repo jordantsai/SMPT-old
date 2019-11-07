@@ -146,6 +146,9 @@
                         <option value="5:00PM">5:00 PM</option>
                     </select>
 
+                    <label for="contact-concern">Briefly Describe Your Concern</label>
+                    <textarea name="concern" id="contact-concern" rows="3" maxlength="280"></textarea>
+
                     <div class="check-group">
                         <input type="checkbox" name="agreetoterms" id="contact-terms" required>
                         <label for="contact-terms" id="terms-label">I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.</label>
@@ -184,7 +187,7 @@
                 </div>
             </section>
         </div>
-        <iframe title="Google Maps location" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=1821+Wilshire+Blvd%2C+Suite+400%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
+        <iframe title="Google Maps location" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhA5smfmlEc7s3WEO7raxvTKeWAtFOAC8&q=Santa+Monica+Physical+Therapy%2C1821+Wilshire+Blvd%2C+Santa+Monica%2C+CA+90403" allowfullscreen></iframe>
         <nav class="row" aria-label="website">
 
             <ul class="box" role="menu" aria-label="main">
@@ -201,8 +204,14 @@
     <script type="text/javascript">
         function formValid() {
             if (document.getElementById('contact-terms').checked) {
+                if (document.getElementById('contact-phone').value && document.getElementById('contact-email').value){
                 return true
+                } else{
+                    alert('Please enter a phone number or email for us to contact you.')
+                    return false
+                }
             } else {
+                alert('Please read the statement below and check box to submit.')
                 return false
             }
         }
