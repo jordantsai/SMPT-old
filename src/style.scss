@@ -732,13 +732,18 @@ body {
         padding: 0 8px;
     }
 
-    input, select {
+    input, select, textarea {
         display: block;
         height: 24px;
         width: 300px;
         border: 1px solid hsla(197, 15%, 15%, 1);
         border-radius: 4px;
+        padding: 2px;
         background-color: white;
+    }
+    textarea {
+        height: unset;
+        line-height: 1.25;
     }
 }
 
