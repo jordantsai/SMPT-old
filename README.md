@@ -4,7 +4,7 @@
 _SMPT website & build tools_ 
 
 
-##Installation
+## Installation
 
 Project uses node server environment. If you haven't already, install [Node.js](https://nodejs.org/en/download/) 
 - To verify Node installation, enter at command line: `node --version`
