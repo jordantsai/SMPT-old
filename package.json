@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aOpenbrier/SMPT.git"
+    "url": "git+https://github.com/jordantsai/SMPT.git"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/aOpenbrier/SMPT/issues"
   },
-  "homepage": "https://github.com/aOpenbrier/SMPT",
+  "homepage": "https://github.com/jordantsai/SMPT",
   "dependencies": {},
   "browserslist": [
     ">0.2% in US",
