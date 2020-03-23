@@ -2,11 +2,19 @@
 
 $primary: #025272;
 $secondary: #6797AA;
-
+div.covid {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(202, 227, 236);
+}
 h2.covidAlert {
     color: rgb(173, 0, 0);
+    font-size: 30px;
 }
-
+div#covidActions {
+    padding: 10px;
+}
 @font-face {
     font-family: "Fivo Sans Medium";
     src: url("../font/FivoSans-Medium.otf");
