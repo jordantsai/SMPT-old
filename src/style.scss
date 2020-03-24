@@ -15,6 +15,9 @@ h2.covidAlert {
 div#covidActions {
     padding: 10px;
 }
+@media screen and (max-width: 900px) {
+    #covidActions {display: none;}    
+    }
 @font-face {
     font-family: "Fivo Sans Medium";
     src: url("../font/FivoSans-Medium.otf");
