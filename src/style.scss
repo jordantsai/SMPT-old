@@ -15,6 +15,40 @@ h2.covidAlert {
 div#covidActions {
     padding: 10px;
 }
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1; /* Sit on top */
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    opacity: .8;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    text-align: left;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    padding: 30px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+  }
+  
 #CCPA {
     padding: 30px 5px 0px 5px;  
     font-size: 10px;
@@ -245,6 +279,7 @@ body {
     margin-left: 4px;
 }
 
+
 .actions {
     display: flex;
     justify-content: center;
@@ -268,7 +303,9 @@ body {
 
     a:hover, a:focus {
         transform: translate(0, -1px);
-        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3)
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+        color: white;
+        text-decoration: none;
     }
 
     a:active {
@@ -276,7 +313,33 @@ body {
         box-shadow: none;
     }
 }
+.covidButton {
+    background-color: $primary;
+    margin-right: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+        height: 48px;
+        width: 150px;
+        padding: 0 8px;
+        line-height: 18px;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.covidButton:hover {
+    transform: translate(0, -1px);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.covidButton:active {
+    transform: translate(0, 1px);
+    box-shadow: none;
+}
 #nav-collapse {
     background-color: $secondary;
 
