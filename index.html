@@ -115,10 +115,14 @@
         <div class="covid">
             <div>
                 <h2 class="covidAlert">Update on coronavirus (COVID-19)</h2>
-                <p class="covidParagraph">With the ongoing quarantine in effect, SMPT is now offering e-visit services
-                    to continue helping our patients during this time. You can meet with your therapist online and still
-                    use your insurance coverage for PT. Call or email today to schedule your appointments and continue
-                    your care!</p>
+                <p class="covidParagraph">
+                    If you are a current patient and have any cold or flu symptoms, you will be asked to cancel your
+                    appointment and can resume in 2 weeks or following a negative test result. Free testing for LA county can be found through this resource:<br>
+                    <a href="/https://covid19.lacounty.gov/testing/" target="_blank">https://covid19.lacounty.gov/testing/</a>
+                    <br><br>
+                    You can still continue your care from home with our e-visit program! Call or email today to schedule your appointments and continue
+                    your care!
+                </p>
             </div>
             <!-- Trigger/Open The Modal -->
             <button class="covidButton" id="covidButton">Safety Measures</button>
@@ -129,7 +133,8 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <h3 style="font-size: 18px; font-weight: bold; text-align: center; padding: 10px;">COVID-19 SAFETY PRECAUTIONS</h3>
+                    <h3 style="font-size: 18px; font-weight: bold; text-align: center; padding: 10px;">COVID-19 SAFETY
+                        PRECAUTIONS</h3>
                     <p>&#9642; Patients will be scheduled for 45min sessions on the hour to provide a 15min
                         gap between every patient<br><br>
                         &#9642; E-visits will continue to occur on non-physically present days<br><br>
@@ -143,7 +148,7 @@
                         &#9642; 6ft separation will be enforced as much as reasonably possible</p>
                 </div>
             </div>
-            </div>
+        </div>
 
 
         <!-- END OF HEADER -->
@@ -398,20 +403,20 @@
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-          modal.style.display = "block";
+        btn.onclick = function () {
+            modal.style.display = "block";
         }
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
+        span.onclick = function () {
+            modal.style.display = "none";
         }
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-        </script>
+    </script>
 </body>
 
 </html>
