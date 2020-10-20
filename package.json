@@ -24,15 +24,17 @@
     "url": "https://github.com/jordantsai/SMPT/issues"
   },
   "homepage": "https://github.com/jordantsai/SMPT",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
   "browserslist": [
     ">0.2% in US",
     "not ie <= 10"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "autoprefixer": "^9.8.6",
     "cpx2": "^2.0.0",
     "gh-pages": "^2.2.0",
